@@ -202,8 +202,8 @@ function parse_desktop_file(arg)
 
     -- Don't show the program if NoDisplay is true
     -- Only show the program if there is not OnlyShowIn attribute
-    -- or if it's equal to 'awesome'
-    if program.NoDisplay == "true" or program.OnlyShowIn ~= nil and program.OnlyShowIn ~= "awesome" then
+    -- or if it's equal to 'awesome' or $XDG_SESSION_DESKTOP
+    if program.NoDisplay == "true" or program.OnlyShowIn ~= nil and not (program.OnlyShowIn:find( "awesome" ) or program.OnlyShowIn:find( os.getenv('XDG_SESSION_DESKTOP') )then
         program.show = false
     end
 
