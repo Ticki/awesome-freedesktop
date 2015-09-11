@@ -68,14 +68,6 @@ the rest of the items.
   mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
-
-  -- desktop icons
-  require('freedesktop.desktop')
-  for s = 1, screen.count() do
-        freedesktop.desktop.add_applications_icons({screen = s, showlabels = true})
-        freedesktop.desktop.add_dirs_and_files_icons({screen = s, showlabels = true})
-  end
-
 License
 =======
 
