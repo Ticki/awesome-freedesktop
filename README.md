@@ -1,4 +1,4 @@
-About
+AwesomeWM Freedesktop
 =====
 
 This project aims to add support for freedesktop.org compliant desktop entries
