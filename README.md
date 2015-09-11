@@ -7,7 +7,7 @@ and menu.
 Installation
 ============
 
-Just drop freedesktop/ folder in your ~/.config/awesome/ directory.
+Just drop `freedesktop/` folder in your `~/.config/awesome/` directory.
 
 Main features
 =============
@@ -19,17 +19,21 @@ Main features
 Icon themes
 ===========
 
-You can choose any icon theme that's installed in /usr/share/icons/. To define
+You can choose any icon theme that's installed in `/usr/share/icons/`. To define
 your icon theme, you can do the following before you require
 "freedesktop.menu", but after you require "freedesktop.utils" (see example
 usage below):
 
+```lua
   freedesktop.utils.icon_theme = 'gnome'
+```
 
 You can also use more than one icon theme, by assigning a Lua table containing
 a list of themes.
 
+```lua
   freedesktop.utils.icon_theme = { 'Mist', 'gnome' }
+```
 
 When you use a list of icon themes, icons will be looked up in themes list in
 the order you specified. The first theme containing the desired icon will be
@@ -45,6 +49,7 @@ You can use the freedesktop module in your awesome configuration
 you can also uncomment the two lines that insert the Debian menu together with
 the rest of the items.
 
+```lua
   -- applications menu
   require('freedesktop.utils')
   freedesktop.utils.terminal = terminal  -- default: "xterm"
@@ -67,6 +72,7 @@ the rest of the items.
 
   mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
+```
 
 License
 =======
